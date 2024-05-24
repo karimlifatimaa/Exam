@@ -1,0 +1,27 @@
+﻿@using Core.Models;
+
+@model Portfolio
+<div class="container">
+    <div class="row">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Names</label>
+                <input asp-for="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span asp-validation-for="Name" style="color:red"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <input asp-for="Description" class="form-control" id="exampleInputPassword1">
+                <span asp-validation-for="Description" style="color:red"></span>
+
+            </div>
+            <div class="mb-3 form-check">
+                <input asp-for="PhotoFile" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">PhotoFile</label>
+                <span asp-validation-for="PhotoFile" style="color:red"></span>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
